@@ -18,7 +18,7 @@ def get_imgPlane_list(*args):
     
     # we need to make sure we kill the run-away script jobs hence the try loop:
     
-    for jbid in list(_PER_JOB_ID):
+    for jbid in list(PER_JOB_ID):
         try:
             if cmd.scriptJob(exists=jbid):
                 cmd.scriptJob(kill=jbid, force=True)
@@ -325,3 +325,4 @@ def CameraSecImagerUI():
 
 
 CameraSecImagerUI()       
+
